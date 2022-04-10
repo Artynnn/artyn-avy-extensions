@@ -1,0 +1,9 @@
+See the article [[https://karthinks.com/software/avy-can-do-anything/][Avy Can Do Anything]] which demonstrates the power of
+Avy. Most of the code for is from that article.
+
+I still rarely use it but it is really nice to have. I find that
+=avy-goto-char-timer= is the only command you need.
+
+The most useful things from it has been yanking lines and words, which
+use to be complex mouse operations.
+
