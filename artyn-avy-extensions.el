@@ -25,6 +25,7 @@
 ;; jump to synonym (with completion)
 ;; jump to definition?
 ;; capitalize word
+;;; Code:
 
 (require 'avy)
 (require 'embark)
@@ -36,11 +37,14 @@
   "Extensions for avy."
   :group 'avy)
 
+;;;; keys to use for avy
+;; These can't be the keys we will use for the avy actions.
 (setq avy-keys '(?q ?e ?r ?u ?o ?p    ;; ?y
                     ?a ?s ?d ?f ?g ?h ;; ?j
                     ?k ?l ?' ?x ?c ?v ?b
                     ?n ?, ?/))
 
+;;;; avy actions
 (defun my-org-retrieve-url-from-point ()
   "Copies the URL from an org link at the point"
   (interactive)
@@ -276,6 +280,9 @@ active region use it instead."
   ;; ("C-M-r" . isearch-backward-other-window))
   
   ;; for some reason I have to use `eval-last-sexp' for it work?
+
+
+;;;; keybindings  
   (setf (alist-get ?k avy-dispatch-alist) 'avy-action-kill-stay
         (alist-get ?K avy-dispatch-alist) 'avy-action-kill-whole-line)
   ;; (setf (alist-get ?w avy-dispatch-alist) 'avy-action-copy-gnus-url ;; nee copy
